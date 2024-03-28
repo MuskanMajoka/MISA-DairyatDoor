@@ -1,0 +1,29 @@
+<!-- confirm_request.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}
+Request Confirmed
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/confirm_request.css') }}">
+{% endblock %}
+
+{% block content %}
+<body>
+    <div class="confirm-request-container">
+        {% if success == 1 %}
+            <h1>Your order request has been generated!</h1>
+            <p>To check the status, click the button below:</p>
+            <a href="/status" class="check-status-button">Check Status</a>
+        {% elif success == 0 %}
+            <h1 class="insufficient-balance-message">Insufficient balance in the wallet</h1>
+            <p>Please add the required amount to your wallet before confirming the request.</p>
+            <a href="/cart" class="go-to-cart-button">Go to Cart</a>
+        {% else %}
+            <h1 class="error-message">An error occurred. We are looking into it.</h1>
+        {% endif %}
+    </div>
+</body>
+{% endblock %}

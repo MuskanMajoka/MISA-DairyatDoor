@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% block title %}
+MarketSearch page
+{% endblock %}
+{% block head%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/vets.css') }}">
+
+{% endblock %}
+{% block content %}
+<div class="d-flex loc-filter">
+    <div id="myBtnContainer " class="loc-btn">
+        <h3>Location filter:</h3>
+        <input type="radio" class="check " name="Location" value="All" checked="checked" onclick="filterSelection('All')">
+        <label for="All">All</label>
+        </br>
+        <input type="radio" class="check" name="Location" value="Delhi" onclick="filterSelection('Delhi')">
+        <label for="Delhi">Delhi</label><br>
+        <input type="radio" class="check" name="Location" value="Bangalore" onclick="filterSelection('Bangalore')">
+        <label for="Bangalore">Bangalore</label><br>
+        <input type="radio" class="check" name="Location" value="Tamil Nadu" onclick="filterSelection('Tamil Nadu')">
+        <label for="Tamil Nadu">Tamil Nadu</label><br>
+    </div>
+    <div>
+        <section>
+            <div class="d-flex justify-content-center flex-wrap vet-head">
+                <h1>Select the Vet you want to contact. </h1>
+            </div>
+        </section>
+        <section>
+            <div class="">
+                {% for item in items %}
+                    <div class=" filterDiv {{ item.location }}" style="margin:40px; padding:20px; border: 1px solid black">
+                        <div class="d-flex">
+                            <div class="vetImg">
+                                <img style="width:200px; height:200px; margin: 0 auto;" src="{{item.logo[0].downloadURL}}" class="" alt="{{ item.name }}">
+                            </div>
+                            <div class="desc">
+                                <div class="desc-heading">
+                                    <h2 class="">{{ item.name }}</h2>
+                                </div>
+                                <div class="d-flex desc-body">
+                                    <div>
+                                        <ul >
+                                            <li ><strong>Location:</strong> {{ item.location }} </li>
+                                            <li ><strong>Contact:</strong> {{ item.phoneno }}</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <ul>
+                                            <li ><b>Timings:</b> {{ item.timings }}</li>
+                                            <li ><b>Type:</b> {{ item.type }}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <button type="button" class="btn-success btn-sm">
+                                        <a href="/vetsdetail/{{item.name}}" class="" style="color:white; text-decoration:none">More Info</a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+    </div>
+</div>
+
+<script>
+    filterSelection("All")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("filterDiv");
+      if (c == "All") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+    
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+    
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+    
+</script>
+{% endblock %}
+
+    <!--

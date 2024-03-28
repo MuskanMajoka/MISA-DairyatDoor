@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}
+Login page
+{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+
+{% endblock %}
+
+{% block content %}
+<body>
+  <div class="log">
+    <div class="container">
+      <div class="detail text-center">
+        <form method="POST" class="form-signin" style="color:black">
+            {{ form.hidden_tag() }}
+                <h1 class="h2 mb-3 front-weight-normal" style="text-align:left;">Please Login</h1>
+                  <hr style="height:2px;border-width:0;color: #465363;background-color:#465363;width:50%;margin-bottom:20px;">
+                <h5 style="color:black;">Email: </h5>
+                {{ form.email(class="form-control", placeholder="Email") }}
+<br>
+                <h5 style="color:black;">Password: </h5>
+                {{ form.password(class="form-control", placeholder="Password") }}
+   <br>
+                <div class="checkbox mb-3">
+                    <h6>Don't have an account? <a class="sign" href="{{ url_for('register_page') }}">Register</a></h6>
+
+                </div>
+            <br>
+                {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+{% endblock %}

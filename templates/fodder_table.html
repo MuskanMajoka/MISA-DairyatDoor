@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}
+MarketSearch page
+{% endblock %}
+{% block head%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/table.css') }}">
+
+
+
+{% endblock %}
+{% block content %}
+
+<div>
+    <div class="theading">
+        <h1>Fodder companies in the Area</h1>
+        <hr>
+    </div>
+<div class="tstyle">
+<table class="table table-hover">
+    <thead>
+
+    <tr>
+            <!-- Your Columns HERE -->
+            <th scope="col">Company</th>
+            <th scope="col">Livestock</th>
+            <th scope="col">State</th>
+            <th scope="col">Location</th>
+            <th scope="col">PhoneNo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Your rows inside the table HERE: -->
+        {% for item in items %}
+
+                    <tr>
+
+                <td>{{ item.Name }}</td>
+                <td>{{ item.livestock }}</td>
+                <td>{{ item.state }}</td>
+                <td>{{ item.location }}</td>
+                <td>{{ item.phoneNo }}</td>
+            </tr>
+        {% endfor %}
+
+    </table>
+</div>
+</div>
+
+{% endblock %}
+
+    <!--

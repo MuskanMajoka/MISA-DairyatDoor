@@ -1,0 +1,53 @@
+.log{
+  background: url("images/loginbg2.jpg");
+  background-size: cover;
+  min-height: 90.7vh;
+}
+
+.container{
+  display: flex;
+  padding: 44.5px 0;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.detail{
+  display: flex;
+  background-color: #0004;
+  padding: 30px 10px;
+  width: 40%;
+  justify-content: center;
+}
+
+.form-signin{
+  width: 80%;
+}
+
+h5{
+  text-align: left;
+}
+.sign{
+  color: #3f4b59;
+}
+
+.sign:hover{
+  color: #596473;
+  text-decoration: none;
+}
+
+.btn-primary{
+  background-color: #465363;
+  border-color: #3f4b59;
+}
+
+.btn-primary:hover{
+  background-color: #596473;
+  border-color: #465363;
+  transition: 0.7s;
+
+}
+
+.alert{
+  margin-bottom: 0;
+}

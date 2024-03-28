@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.study{
+  background-color: #efeae7;
+
+}
+
+.study1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url(images/studybg1.jpg);
+  background-size: cover;
+  min-height: 80vh;
+  padding: 50px 100px;
+}
+
+.study2{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  background-color: #0009;
+}
+
+.study1 h1{
+  font-size: 30px;
+  font-family: Poppins;
+}
+
+
+
+.infor{
+  font-size: 20px;
+}
+
+.head1{
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.institutes{
+  display: flex;
+  margin: 20px 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+.institutes img{
+  margin: 0 5px;
+  width: 25%;
+  height: 40vh;
+}
+
+.infod{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px 50px;
+  height: auto;
+
+
+}
+
+.section3{
+  padding-top: 30px;
+  background-color: #ece1dc;
+}
+
+hr{
+  height: 1px;
+}
+
+.set{
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}

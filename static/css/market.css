@@ -1,0 +1,48 @@
+.log{
+  background: url("images/marketbg.jpg");
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.container{
+  display: flex;
+  padding: 50px 0;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.machine{
+  display: flex;
+  background-color: #fff8;
+  padding: 20px 50px;
+}
+
+.form-control{
+  text-align: left;
+}
+
+h5{
+  text-align: left;
+}
+
+.btn-primary{
+  background-color: #465363;
+  border-color: #3f4b59;
+}
+
+.btn-primary:hover{
+  background-color: #596473;
+  border-color: #465363;
+  transition: 0.7s;
+
+}
+
+.alert{
+  margin-bottom: 0;
+}
+
+select option{
+  background-color: #3f4b59;
+  color: white;
+}

@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block title %}
+MarketSearch page
+{% endblock %}
+{% block head%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/table.css') }}">
+
+
+
+{% endblock %}
+{% block content %}
+
+<div>
+    <div class="theading">
+        <h1>Available Workshops</h1>
+        <hr>
+    </div>
+<div class="tstyle">
+<table class="table table-hover">
+    <thead>
+
+    <tr>
+            <!-- Your Columns HERE -->
+            <th scope="col">Institute_Name</th>
+            <th scope="col">Name of Programme</th>
+            <th scope="col">Duration</th>
+            <th scope="col">Programme fees</th>
+            <th scope="col">Focus Area</th>
+            <th scope="col">Participants</th>
+            <th scope="col">Participants and Eligibility Criteria</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Your rows inside the table HERE: -->
+        {% for item in items %}
+
+            <tr>
+                <td>{{ item.instituteName }}</td>
+                <td>{{ item.nameOfProgramme }}</td>
+                <td>{{ item.duration }}</td>
+                <td>{{ item.programmeFees }}</td>
+                <td>{{ item.focusArea }}</td>
+                <td>{{ item.participants }}</td>
+                <td>{{ item.participantsEligibilityCriteria }}</td>
+            </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+</div>
+</div>
+
+{% endblock %}
+
+    <!--

@@ -1,0 +1,54 @@
+.sign{
+  background: url("images/signbg.jpg");
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.container{
+  display: flex;
+  padding: 30px 0;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.signup{
+  display: flex;
+  background-color: #0005;
+  padding: 20px 30px;
+  justify-content: center;
+  width: 45%;
+}
+
+.form-content{
+  margin: 12px 0;
+  width: 80%;
+  height: calc(1.5em + 0.75rem + 2px);
+  border: none;
+  border-radius: 0.2rem;
+}
+
+.btn-primary{
+  background-color: #465363;
+  border-color: #3f4b59;
+}
+
+.btn-primary:hover{
+  background-color: #596473;
+  border-color: #465363;
+  transition: 0.7s;
+}
+
+.login{
+  color: #3f4b59;
+}
+
+.login:hover{
+  color: #596473;
+  text-decoration: none;
+}
+
+select option{
+  background-color: #3f4b59;
+  color: white;
+}

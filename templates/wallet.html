@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Wallet
+{% endblock %}
+
+{% block head %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/wallet.css') }}">
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+{% endblock %}
+
+{% block content %}
+<body>
+    <h1>Your Wallet</h1>
+    {% for item in wallet_d %}
+    <div class="wallet-section">
+        <p>Amount in Wallet: Rs. {{ item.amount }}</p>
+        <a href="/cart" class="go-back-button">Go Back</a>
+        <a href="#" class="add-money-button" onclick="showAddMoneySection()">Add Money</a>
+
+        <!-- Add Money Section (Initially Hidden) -->
+        <div id="add-money-section" style="display: none;">
+            <form id="add-money-form">
+                <div class="amount-field">
+                    <label for="amount">Amount Added:</label>
+                    <input type="number" id="amount" name="amount"  required min="100">
+                </div>
+                <button type="button" class="generate-qr-button" onclick="generateQR()">Generate QR</button>
+            </form>
+
+            <!-- QR Code Section (Initially Hidden) -->
+            <div id="qr-code-section" style="display: none;" class="qr-code">
+                <div id="qrcode"></div>
+            </div>
+
+
+<!-- Done Button Section (Initially Hidden) -->
+<div id="done-button-section" style="display: none;">
+    <form action="{{ url_for('add_money_to_wallet', customer_id=item.id) }}" method="post">
+        <input type="hidden" name="amount" id="done-amount">
+        <button type="submit" class="add-money-button" onclick="showNotification()">Done</button>
+    </form>
+</div>
+</div>
+</div>
+</div>
+{% endfor %}
+
+<script>
+    function showAddMoneySection() {
+        // Show the add money section
+        document.getElementById("add-money-section").style.display = "block";
+    }
+
+    function generateQR() {
+        // Validate the amount field
+        var amountField = document.getElementById("amount");
+        if (amountField.checkValidity()) {
+            // Generate QR code for Paytm URL
+            var paytmUrl = "https://p.paytm.me/xCTH/j17d7pzj";
+            var qrcode = new QRCode(document.getElementById("qrcode"), {
+                text: paytmUrl,
+                width: 128,
+                height: 128
+            });
+
+            // Show the QR code section
+            document.getElementById("qr-code-section").style.display = "block";
+
+            // Show the Done button section
+            document.getElementById("done-button-section").style.display = "block";
+
+            // Set the 'amount' input value for the 'add_money_to_wallet' form
+            document.getElementById("done-amount").value = amountField.value;
+        } else {
+            amountField.reportValidity();
+        }
+    }
+
+    function showNotification() {
+        // Display a success notification using SweetAlert2
+        Swal.fire({
+            icon: 'success',
+            title: 'Success!',
+            text: `Rs. ${document.getElementById("done-amount").value} added to your wallet`,
+        });
+    }
+</script>
+</body>
+{% endblock %}
+

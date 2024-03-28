@@ -1,0 +1,128 @@
+/* cart.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.cart-container {
+    display: flex;
+    margin: 20px;
+}
+
+.cart-items {
+    width: 60%;
+}
+
+.cart-item {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+.cart-item img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 10px;
+}
+
+.cart-item-info {
+    flex-grow: 1;
+}
+
+.cart-item h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.cart-item p {
+    margin: 5px 0;
+}
+
+.cart-item .remove-button {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.right-side {
+    width: 35%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cart-summary,
+.wallet-details,
+.request-status {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.cart-summary h2,
+.wallet-details h2,
+.request-status h2 {
+    text-align: center;
+}
+
+.cart-summary p,
+.wallet-details p,
+.request-status p {
+    margin: 10px 0;
+}
+
+.checkout-button,
+.wallet-button,
+.check-status-button,
+.go-back-button,
+.go-to-market-button,
+.empty-cart-button {
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-button:hover,
+.wallet-button:hover,
+.check-status-button:hover,
+.go-back-button:hover,
+.go-to-market-button:hover,
+.empty-cart-button:hover {
+    background-color: #0056b3;
+}
+
+.empty-cart-message {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    color: #555;
+}
+
+.empty-cart-message h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.empty-cart-message p {
+    font-size: 16px;
+    line-height: 1.5;
+}

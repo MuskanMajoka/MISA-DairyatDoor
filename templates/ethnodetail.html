@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block title %}
+MarketSearch page
+{% endblock %}
+{% block head%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/table.css') }}">
+<style>
+    #map {
+        height: 400px;
+        width: 100%;
+    }
+</style>
+{% endblock %}
+{% block content %}
+
+<div class="d-flex align-items-center flex-column ">
+    <h1>
+        <b>{{items[0].disease}}</b>
+    </h1>
+    <h5>
+        Details of the Ethnoveterinary Practice
+    </h5>
+</div>
+
+<div>
+    <div class="ethnovid d-flex justify-content-center ">
+        <iframe width="1000" height="500" src="{{items[0].videoLink}}">
+        </iframe>
+    </div>
+
+    <!-- Buttons for Navigation -->
+    <div class="d-flex scroll-sec" >
+        <button class="scroll-btn btn btn-primary" onclick="scrollToSection('ingredients')">Ingredients</button>
+        <button class="scroll-btn btn btn-primary" onclick="scrollToSection('preparation')">Preparation</button>
+        <button class="scroll-btn btn btn-primary" onclick="scrollToSection('application')">Application</button>
+    </div>
+</div>
+
+<!-- Ingredients Section -->
+<div id="ingredients" class="d-flex justify-content-center">
+    <h1>Ingredients</h1>
+</div>
+<div class="d-flex justify-content-center flex-wrap">
+    {% for item in items %}
+        <div class="card" style="width: 14rem; height: 11rem; margin:1rem; border: 1px solid black">
+            <img style="width:70%; height:60%; margin: 0 auto;" src="{{item.ingredientsImgs[0].downloadURL}}" class="card-img-top" alt="{{ item.ingredients }}">
+            <div class="card-body d-flex justify-content-between">
+                <h5>{{ item.ingredients }}</h5>
+                <p style="margin: auto 5px;" >-</p>
+                <h5>{{ item.quantity }}</h5>
+
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+<!-- Preparation Section -->
+<div id="preparation" style="margin:30px">
+    <div class="d-flex" style="flex-direction: column; margin:30px" >
+        <h1 class="d-flex justify-content-center" style="margin:20px" >Preparation</h1>
+        <p>{{items[0].preparation}}</p>
+    </div>
+</div>
+
+<!-- Application Section -->
+<div id="application" style="margin:30px">
+    <div class="d-flex" style="flex-direction: column; margin:30px">
+        <h1 class="d-flex justify-content-center" style="margin:20px">Application</h1>
+        <p>{{items[0].application}}</p>
+    </div>
+</div>
+
+<script>
+    function scrollToSection(sectionId) {
+        var element = document.getElementById(sectionId);
+        element.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
+{% endblock %}

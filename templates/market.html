@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %}
+Market page
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/market.css') }}">
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<body >
+  <div class="log">
+    <div class="container">
+      <div class="machine">
+        <form method="POST" class="form-signin" style="color:black">
+            {{ form.hidden_tag() }}
+                <h1 class="h3 mb-3 front-weight-normal">Please  Enter the specifications</h1>
+                <hr style="height:2px;border-width:0;color: #465363;background-color:#465363;width:50%;margin-bottom:20px;">
+                <h5 style="color:black; padding-bottom:5px;">Machine </h5>
+                {{ form.machine(class="form-control", placeholder="Machine") }}
+<br>
+                <h5 style="color:black;padding-bottom:5px;">Capacity</h5>
+                {{ form.capacity(class="form-control", placeholder="Capacity in litre per hour") }}
+   <br>
+                <h5 style="color:black;padding-bottom:5px;">Automation Grade </h5>
+                {{ form.automation(class="form-control", placeholder="Automation Grade") }}
+   <br>
+               <br>
+                {{ form.showdata(class="btn btn-lg btn-block btn-primary") }}
+
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+{% endblock %}
+
+    <!--

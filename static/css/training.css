@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+.train{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(images/trainbg.jpg);
+    background-size: cover;
+    padding: 50px 0;
+}
+
+.container{
+  font-family: 'Ubuntu', sans-serif;
+}
+
+
+.trainings{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+.btn-primary{
+  background-color: #465363;
+  border-color: #3f4b59;
+}
+
+.btn-primary:hover{
+  background-color: #596473;
+  border-color: #465363;
+  transition: 0.7s;
+
+}
+
+.sites{
+  padding: 40px 30px;
+  background-color: #e2e6df;
+}
+
+.start{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.teplu{
+  background-color: #f0f3ef;
+  display: flex;
+  align-items: center;
+}
+
+.cedsi{
+  background-color: #f0f3ef;
+  display: flex;
+  align-items: center;
+}
+
+.per{
+  background-color: #f0f3ef;
+  display: flex;
+  align-items: center;
+}
+
+.kvks{
+  background-color: #f0f3ef;
+  display: flex;
+  align-items: center;
+}
+
+.left{
+  padding-left: 30px;
+  display: flex;
+  width: 70%;
+  height: auto;
+  flex-direction: column;
+}
+
+.right{
+  display: flex;
+  width: 30%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+
+}
+
+a:link{
+  color: black;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #bbbbbb;
+  text-decoration: none;
+}
+
+a:visited{
+  color: #2E2B2B;
+  text-decoration: none;
+}
+
+a:active{
+  color: black;
+  text-decoration: none;
+
+}
+
+h2{
+  padding: 20px 0;
+}

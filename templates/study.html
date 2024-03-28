@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block title %}
+MISA🥛
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/utils.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/study.css') }}">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    {% endblock %}
+
+    {% block content %}
+
+<section class="study">
+  <div class="study1">
+    <div class="study2">
+      <h1 class="my-1">Study_ARENA</h1>
+      <p class="infor">Dairy technology course is an engineering discipline which deals with the processing of dairy products. The study covers various domains of collecting, packaging, storing, processing, transporting and distributing dairy products with an understanding of nutrition, bacteriology and biochemistry. Some other principles of chemistry, physics, engineering and economy required for proper utilisation and development of milk and its products are also included in the dairy technology. This course familiarizes the students with the management, sanitation and training techniques of the dairy industry, primarily of India and other countries as well.
+      </p>
+    </div>
+  </div>
+
+<div class="head1">
+  <h1>Major Institutes</h1>
+
+</div>
+  <div class="institutes">
+    <img src="static/images/study2.png" alt="ICAR logo">
+    <img src="static/images/study1.png" alt="NDRI logo">
+    <img src="static/images/study3.png" alt="Anand logo">
+    <img src="static/images/study4.png" alt="IVRI logo">
+
+
+  </div>
+
+<div class="infod">
+  <p>
+    The foundation of Anand Milk Union Ltd, AMUL, in 1946 led to the development of the dairy industry and gave passage to education solely in dairying. Before that, there was not even a single college offering exclusive graduate degree programme in dairying. Traditionally, it was the part of veterinary and animal husbandry courses. The first dairy science college established is the National Dairy Research Institute in Karnal (Haryana) which now offers diploma, undergraduate and postgraduate courses in dairy technology. The National Dairy Research Institute has also established modern commercial dairies with the financial support of National Dairy Development Board (NDDB).
+  </p>
+
+</div>
+
+</section>
+<hr>
+<section class="section3">
+  <div id="ser" class="flex flex-col">
+    <div class="flex flex-col justify-center">
+      <h2  class="my-1">SECTIONS</h2>
+        <p class="my-1 set">All the sections mentioned below include information regarding the courses available at several institues all over India, all around year workshops conducted by multiple institutes, training programmes by several dairy farms and a case study on a dairy farm.</p>
+    </div>
+
+    <div class="Services">
+
+      <a class="Services-child Order" href="{{ url_for('institute_page') }}">
+        <img class="Serve-img Order-img" src="static/images/study6.jpg" />
+        <div class="content">
+          <div class="image-title">Institutes</div>
+        </div>
+      </a>
+
+      <a class="Services-child Technology" href="{{ url_for('workshop_page') }}">
+        <img class="Serve-img Technology-img" src="static/images/study7.jpg" />
+        <div class="content">
+          <div class="image-title">Workshops</div>
+        </div>
+      </a>
+
+
+      <a class="Services-child Fodder" href="{{ url_for('training_page') }}">
+        <img class="Serve-img Fodder-img" src="static/images/study8.jpg" />
+        <div class="content">
+          <div class="image-title">Dairy Training</div>
+        </div>
+      </a>
+
+      <a class="Services-child Study"  href="{{ url_for('case_page') }}">
+        <img class="Serve-img Study-img" src="static/images/study9.jpg" />
+        <div class="content">
+          <div class="image-title">Case Study</div>
+        </div>
+      </a>
+      
+    </div>
+
+  </div>
+
+</section>
+
+
+
+    {% endblock %}

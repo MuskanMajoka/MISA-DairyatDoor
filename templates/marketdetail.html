@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% block title %}
+MarketSearch page
+{% endblock %}
+{% block head%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/marketdetail.css') }}">
+
+
+
+{% endblock %}
+{% block content %}
+
+<div>
+
+    <div class="prodHead">
+        <h1>Product Details</h1>
+        <hr>
+        <hr>
+    </div>
+    {% for item in items %}
+    <div class="Product"> 
+    <div class="imgdesc">
+        <img src="{{item.imgUrl}}" alt="{{ item.product }}">
+    </div>
+    <div class="productdesc">
+    <div>
+        <h2>{{ item.product }}</h2>
+        <h3>by <e class="cname">{{ item.company }}</e></h3>
+        <hr>
+    </div>
+    <div>
+        <table>
+            <tbody>
+            <tr>
+              <td colspan="2">
+                <h3 class="subHeading">Features</h3>
+              </td>
+            </tr>
+            <tr>
+              <td width="200">Brand Name :</td>
+              <td>{{item.company}}</td>
+            </tr>
+              
+            <tr>
+              <td width="200">Automation Grade :</td>
+              <td>{{item.AutomationGrade}}</td>
+            </tr>
+
+            <tr>
+                <td width="200">Capacity :</td>
+                <td>{{item.capacity}}</td>
+            </tr>
+                  
+            <tr>
+                <td width="200">Cost :</td>
+                <td>{{item.cost}}</td>
+            </tr>
+                  
+            <tr>
+                <td width="200">Type of Product :</td>
+                <td>Cream Separator</td>
+            </tr>
+              
+            <tr>
+                <td width="200">Bowl Speed :</td>
+                <td>{{item.bowlSpeed}}</td>
+            </tr>
+
+            <tr>
+                <td width="200">Material :</td>
+                <td>{{item.material}}</td>
+            </tr>
+
+            <tr>
+                <td width="200">Type :</td>
+                <td>{{item.type}}</td>
+            </tr>
+
+            <tr>
+                <td width="200">Reliability :</td>
+                <td>{{item.reliability}}</td>
+            </tr>
+
+            <tr>
+                <td width="200">Skimming Efficiency :</td>
+                <td>{{item.skimmingEfficiency}}</td>
+            </tr>
+
+            <tr>
+                <td width="200">Voltage Supply Needed :</td>
+                <td>{{item.voltageSupplyNeeded}}</td>
+            </tr>
+
+            <tr>
+                <td>
+                    <button class="btn btn-outline btn-success"><a href="{{item.Link_to_buy}}">Buy Item</a></button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+        
+    </div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}
+
+    <!--

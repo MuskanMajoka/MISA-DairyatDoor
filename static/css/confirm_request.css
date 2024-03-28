@@ -1,0 +1,31 @@
+/* confirm_request.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.confirm-request-container {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.check-status-button,
+.go-to-cart-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.insufficient-balance-message,
+.error-message {
+    color: red;
+}

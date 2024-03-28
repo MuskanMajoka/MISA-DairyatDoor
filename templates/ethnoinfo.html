@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block title %}
+Market page
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/utils.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/info.css') }}">
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<body>
+  <section id="About" class="ethno section2" >
+    <div class="health flex flex-col justify-center items-center">
+      <h1>Ethnoveterinary</h1>
+      <hr>
+      <p>
+        Ethnoveterinary practices can prove to be a solution targeting some of the challenges like finances, access to vets and availability of medicines, which are being utilized by farmers however that too faced regional constraints for major diseases.
+      </p>
+    </div>
+  </section>
+  <section id="Services" class="ethnochoice section3">
+    <div id="ser" class="flex flex-col">
+      <div class="flex flex-col justify-center">
+        <h2 class="my-2">Select the Category</h2>
+          <p class="my-2">....Ethnoveterinary practices tailored for the agricultural community....</p>
+      </div> 
+      <div class="Services">
+        <a class="Services-child2 Cow" href = "/ethnosearch/Cow">
+          <img class="Serve-img Cow-img" src="/static/images/cow.jpg" />
+          <div class="content">
+            <div class="image-title">Bovine</div>
+          </div>
+        </a> 
+        
+        <a class="Services-child2 Others" href = "/ethnosearch/Others">
+          <img class="Serve-img Others-img" src="/static/images/others.jpg" />
+          <div class="content">
+            <div class="image-title">Others</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section id="About" class="ethno section2" >
+    <div class="health flex flex-col justify-center items-center">
+      <p>
+        Apart from these ailments, there are multiple common ailments that can also be treated. These ailments includes fever, wounds and infested wounds, eczema, stomach-ache, dysentery, diarrhea, bone fracture, cough, foot and mouth disease, broken horns, ectoparasite, indigestion, dog bite, internal parasites, snake bite, placental discharge or removal, poisonous bites, insect bites, eye diseases and injuries, cold, food poison, weakness, constipation, gastric problems, improving lactation, mastitis, sprain, swelling, tongue disease, fertility, flatulence, skin diseases and infection, throat infection, bodily aches, urinary issues.
+      </p>
+    </div>
+  </section>
+
+</body>
+
+{% endblock %}
+
+    <!--

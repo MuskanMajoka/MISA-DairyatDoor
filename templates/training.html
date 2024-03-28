@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Workshops</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/training.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ </head>
+ <body>
+   <div class="train">
+     <div class="container">
+      <div class="table-responsive">
+
+       <h1 align="center">Trainings at different Farms</h1>
+       <p align="center">Several farms all around India provide onsite training and experience for people who wish to open their own dairy farms </p>
+       <br />
+       <div class="trainings">
+        <form method="POST" class="form-signin" style="clor:back">
+            {{ form.hidden_tag() }}
+                
+               <br>
+                {{ form.showdata(class="btn btn-lg btn-block btn-primary") }}
+
+        </form>
+      </div>
+      </div>
+     </div>
+
+   </div>
+
+   <div class="sites">
+
+     <div class="start">
+       <h1>Trainings and Workshops conducted by several institutes and platforms </h1>
+       <p>All around India, multiple platforms and institutes conduct several trainings and workshops regarding Dairy Industry to help people get well acquainted with the Dairy Sector amd help them grow. </p>
+
+     </div>
+
+     <div class="teplu">
+       <div class="left">
+         <h2 style="margin: 0;"><a href="https://teplu.in/">Teplu</a></h2>
+         <p>
+           A startup registered with the DIPP, Ministry of Commerce, GOI and incubated by Indian Veterinary Research Institute.
+           <br>
+           <br>
+           The company helps dairy farmers increase their incomes using online educational courses and advisory services
+           <br>
+           The company has been considered as one of the top startups by IIT Bombay, during Eureka 2018.
+        </p>
+       </div>
+       <div class="right">
+         <img src="static/images/teplu.jpg" alt="">
+
+       </div>
+
+     </div>
+
+     <hr>
+
+     <div class="cedsi">
+       <div class="left">
+         <h2 style="margin: 0;"><a href="https://www.cedsi.in/training-skilling.php">CEDSI</a></h2>
+         <p>
+           The Centre of Excellence for Dairy Skills in India(CEDSI) aims to ensure sustainability and profitability in the dairy sector through skilling and capacity building, policy advocacy, knowledge management and research.
+           <br>
+           CEDSI provides 3 types of training
+         </p>
+           <ul>
+             <li>Farmers Training </li>
+             <li>Industrial Training</li>
+             <li>Training of Trainers</li>
+           </ul>
+       </div>
+       <div class="right">
+         <img src="static/images/cedsi.png" alt="">
+
+       </div>
+
+     </div>
+
+     <hr>
+
+     <div class="per">
+       <div class="left">
+         <h2 style="margin: 0;"><a href="https://supplychain.pertecnica.in/logistics-of-dairy-and-milk-products-training-and-internships/">PERTECNICA</a></h2>
+         <p>
+           Pertecnica Engineering is an Hyderabad based consulting Company. Apart from Engineering consulting, Pertecnica is also offering training services to budding technicians.
+           <br>
+           Pertecnica Engineering offers the job oriented courses for Engineering graduates.
+           In Dairy sector, it provides
+           <br>
+           <br>
+           <b><em>Logistics of Dairy and Milk products</em></b> – Training and Internships which is a training on Dairy and milk business and imparts Training on Procurement, Warehousing and Logistics challenges to Diary business entrepreneurs.
+
+        </p>
+
+       </div>
+       <div class="right">
+         <img src="static/images/per.png" alt="">
+
+       </div>
+
+
+   </div>
+
+   <hr>
+
+   <div class="kvks">
+     <div class="left">
+       <h2 style="margin: 0;"><a href="https://kvk.icar.gov.in/">KVKS</a></h2>
+       <p>Krishi Vigyan Kendra(KVK) is an integral part of the National Agricultural Research System (NARS), aims at assessment of location specific technology modules in agriculture and allied enterprises, through technology assessment, refinement and demonstrations.
+         <br>
+         <br>
+         KVKs produce quality technological products and make it available to farmers, organize frontline extension activities, identify and document selected farm innovations
+         <br>
+         Multiple KVKs provide courses and training on dairy industry
+       </p>
+     </div>
+     <div class="right">
+       <img src="static/images/kvk.jpeg" alt="">
+
+     </div>
+
+
+
+   </div>
+
+
+
+
+   </body>
+  </html>

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}
+MISA🥛
+{% endblock %}
+
+{% block head %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/info.css') }}">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  
+  {% endblock %}
+
+  {% block content %}
+
+<body class="fod">
+  <section id="About" class="section2" >
+    <div id="bottom" class="aboutfodder flex flex-col justify-center items-center">
+      <h1 class="my-1">Fodder</h1>
+      <hr>
+      <p>
+        Fodder is a very important part of dairy sector .Fodder is the feed that is given to livestock which is very important to maintain the health and the breeding efficiency of the livestock Fodder includes hay,straw,silage,rye,oils,mixed rations, sprouted grains,wheat.Also the waste material obtained after processing sugar beet can serve as fodder. Also fodder is also known as provender and some ingredients of animal origin are added to it.It is a coarse food for livestock composed of entire plants including leaves,stalks and grains, of such forages as grain and sorghum.
+      </p>
+      <p>
+        When we are talking of the dairy sector, fodder is one of the important aspects. Good health of animals is directly proportional to good fodder. Thus, fodder production is given special importance now-a-days.   
+      </p>
+    </div>
+  </section>
+  <section> 
+    <div class="log">
+      <div class="container">
+        <div class="fod-heading">
+          <h2>Looking for good fodder.<h2>
+          <h3>Search is over now.</h3> 
+          <p>Select your State and know about the fodder near you.</p>
+        <div> 
+        <div class="fodder">
+          <form method="POST" class="form-signin" style="color:black">
+              {{ form.hidden_tag() }}
+                  <h1 class="h3 mb-3 front-weight-normal">Please enter your State</h1>
+                  <hr style="height:2px;border-width:0;color: #465363;background-color:#465363;width:50%;margin-bottom:20px;">
+                  <h5 style="color:black; padding-bottom:5px;">State </h5>
+                  {{ form.state(class="form-control", placeholder="State") }}
+                <br>
+                  {{ form.showdata(class="btn btn-lg btn-block btn-primary") }}
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+{% endblock %}
+

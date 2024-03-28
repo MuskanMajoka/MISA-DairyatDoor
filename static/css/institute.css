@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.inst h1{
+  margin-top: 50px;
+  color: black;
+  background-color: #fff6;
+}
+
+.inst{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(images/instbg.jpg);
+    background-size: cover;
+}
+.container{
+  margin: 20px 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+.cont{
+  display: flex;
+  padding: 50px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.course{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: #fff6;
+  padding: 20px 50px;
+}
+
+.form-control{
+  text-align: left;
+}
+
+h5{
+  text-align: left;
+}
+
+.btn-primary{
+  background-color: #465363;
+  border-color: #3f4b59;
+}
+
+.btn-primary:hover{
+  background-color: #596473;
+  border-color: #465363;
+  transition: 0.7s;
+
+}
+
+.alert{
+  margin-bottom: 0;
+}
+
+select option{
+  background-color: #3f4b59;
+  color: white;
+}
+.basics{
+  background-color: #edebea;
+  padding: 30px 50px;
+  min-height: 70vh;
+}
+
+.base{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.icar{
+  background-color:#f6f5f4;
+  display: flex;
+}
+
+.ndri{
+  background-color:#f6f5f4;
+  display: flex;
+
+}
+.Anand{
+  background-color:#f6f5f4;
+  display: flex;
+
+}
+.ivri{
+  background-color:#f6f5f4;
+  display: flex;
+
+}
+
+.left{
+  padding-left: 20px;
+  display: flex;
+  width: 70%;
+  height: auto;
+  flex-direction: column;
+}
+
+.right{
+  display: flex;
+  width: 30%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+
+}

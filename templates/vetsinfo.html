@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block title %}
+Market page
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/info.css') }}">
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<body >
+  <section id="About" class="ethno section2" >
+    <div class="health flex flex-col justify-center items-center">
+      <h1>Veterinary</h1>
+      <hr>
+      <p>
+        Veterinarians play indispensable roles in the dairy industry, serving as guardians of both animal health and overall herd productivity. One of their primary responsibilities is preventive healthcare, implementing vaccination programs to shield dairy cows from common diseases and conducting routine examinations to detect and address potential issues early on. In cases of illness, veterinarians diagnose and treat ailments, prescribing medications and offering advice on quarantine and biosecurity measures to prevent disease spread.      
+      </p>
+    </div>
+  </section>
+  <section id="Services" class="ethnochoice section3">
+    <div id="ser" class="flex flex-col">
+      <div class="flex flex-col justify-center">
+        <h2 class="my-2">Select the Category</h2>
+          <p class="my-2">....Veterinary facilities tailored for the agricultural community....</p>
+      </div> 
+      <div class="Services">
+        <a class="Services-child2 Cow" href = "/vetssearch/Cow">
+          <img class="Serve-img Cow-img" src="/static/images/cow.jpg" />
+          <div class="content">
+            <div class="image-title">Bovine</div>
+          </div>
+        </a> 
+        
+        <a class="Services-child2 Others" href = "/vetssearch/All">
+          <img class="Serve-img Others-img" src="/static/images/others.jpg" />
+          <div class="content">
+            <div class="image-title">Others</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section id="About" class="ethno section2" >
+    <div class="health flex flex-col justify-center items-center">
+      <p>
+        Additionally, vets are instrumental in addressing herd-level challenges, such as implementing biosecurity protocols, managing disease outbreaks, and advising on facility design to optimize animal comfort and health. Their expertise extends beyond clinical care to encompass broader aspects of farm management, making them crucial contributors to the sustainable and efficient functioning of the dairy industry.
+      </p>
+    </div>
+  </section>
+
+</body>
+
+{% endblock %}
+
+    <!--

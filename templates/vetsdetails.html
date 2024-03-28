@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block title %}
+MarketSearch page
+{% endblock %}
+{% block head%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/marketdetail.css') }}">
+
+
+{% endblock %}
+{% block content %}
+
+<div>
+
+    <div class="prodHead">
+        <h1>Details about the Vet</h1>
+        <hr>
+        <hr>
+    </div>
+    {% for item in items %}
+    <div class="Product"> 
+    <div class="imgdesc">
+        <img src="{{item.vetImg[0].downloadURL}}" alt="{{ item.name }}">
+    </div>
+    <div class="productdesc">
+    <div>
+        <h2>{{ item.name }}</h2>
+        <h3>Type: <e class="cname">{{ item.type }}</e></h3>
+        <hr>
+    </div>
+    <div>
+        <table>
+            <tbody>
+            <tr>
+              <td colspan="2">
+                <h3 class="subHeading">Details</h3>
+              </td>
+            </tr>
+            <tr>
+              <td width="200">Address :</td>
+              <td>{{item.address}}</td>
+            </tr>
+              
+            <tr>
+              <td width="200">Phone No. :</td>
+              <td>{{item.phoneno}}</td>
+            </tr>
+
+            <tr>
+                <td width="200">Email :</td>
+                <td>{{item.email}}</td>
+            </tr>
+                  
+            <tr>
+                <td width="200">Website :</td>
+                <td><a class="weblink" href="{{item.website}}">{{item.website}}</a></td>
+            </tr>
+                  
+            <tr>
+                <td width="200">Timings :</td>
+                <td>{{item.timings}}</td>
+            </tr>
+              
+            <tr>
+                <td width="200">Details :</td>
+                <td>{{item.details}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+        
+    </div>
+    {% endfor %}
+</div>
+
+
+
+{% endblock %}
+
+    <!--

@@ -1,0 +1,48 @@
+.vet-head{
+    margin-top: 50px;
+}
+
+.vetImg{
+    margin: 20px;
+    border: 2px solid black;
+}
+
+.desc{
+    margin: 20px;
+    width: 650px;
+}
+
+.desc-heading{
+    margin-bottom: 20px;
+}
+
+.desc-body{
+    margin: 20px 0;
+    justify-content: space-between;
+}
+
+ul{
+    line-height: 2em;
+}
+
+.loc-filter{
+    justify-content: space-between;
+}
+
+.loc-btn{
+    margin: 50px 20px;
+}
+
+.filterDiv {
+    display: none;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+  .container {
+    margin-top: 20px;
+    overflow: hidden;
+  }
+  

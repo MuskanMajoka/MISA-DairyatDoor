@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  max-width: 80vw;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+header{
+  background-color: black;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-brand{
+  font-size: 30px;
+}
+
+.navbar-nav{
+  font-size: 18px;
+  color: white;
+
+}
+
+.nav-link {
+	font-size: 16px;
+	color: white;
+   }
+
+.nav-item{
+  padding: 0 7px;
+}
+
+.topleft{
+  width: 70%;
+  height: auto;
+}
+
+.topright{
+  width: 30%;
+  height: auto;
+
+}
+
+/* Custom styles for the carousel */
+
+/* Adjust the carousel caption position */
+.carousel-caption {
+    bottom: 30%;
+}
+
+/* Style the caption text */
+
+.carousel-caption h1 {
+    font-size: 3.5rem;
+    color: black;
+	font-weight: 900;
+}
+.carousel-caption h2 {
+    font-size: 2.5rem;
+    color: black;
+}
+
+.carousel-caption p {
+    font-size: 1.5rem;
+    color: black;
+	font-weight: 700;
+}
+
+/* Style the 'Learn More' and 'Explore' buttons */
+.carousel-caption .btn {
+    margin-top: 20px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.carousel-caption .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Style the carousel indicators (optional) */
+.carousel-indicators li {
+    background-color: #007bff;
+}
+
+.carousel-indicators .active {
+    background-color: #0056b3;
+}
+
+.carousel-item img {
+	height: 600px; /* Adjust the height as needed */
+	width: 100%;   /* Ensure images take the full width of the container */
+	object-fit: cover; /* Maintain the aspect ratio and cover the entire container */
+  }
+  
+.back-blur{
+  background-color: #fff9;
+}
+
+/* Custom styles for the carousel */
+
+/* Adjust the carousel caption position */
+/* .carousel-caption {
+    bottom: 20%;
+} */
+
+/* Style the caption text */
+/* .carousel-caption h2 {
+    font-size: 2.5rem;
+    color: black;
+} */
+
+/* .carousel-caption p {
+    font-size: 1.5rem;
+    color: black;
+} */
+
+/* Style the 'Learn More' and 'Explore' buttons */
+/* .carousel-caption .btn {
+    margin-top: 80px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.2rem;
+} */
+
+/* .carousel-caption .btn:hover {
+    background-color: #0056b3; */
+/* } */
+
+/* Style the carousel indicators (optional) */
+/* .carousel-indicators {
+    bottom: 10px; */
+/* } */
+
+/* .carousel-indicators li {
+    background-color: #007bff;
+    border: 1px solid #fff; 
+} */
+
+/* .carousel-indicators .active {
+    background-color: #0056b3;
+} */
+
+/* .carousel-item img {
+	height: 600px; 
+	width: 100%;   
+	object-fit: cover; 
+  } */
+
+
+.containers{
+	max-width: 100%;
+	margin:auto;
+}
+.row1{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+	background-color: black;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+
+.footer ul{
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: #2E2B2B;
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #EAF6F6;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #2E2B2B;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+@media (max-width: 490px) {
+  .containers{
+    max-width: 490px;
+    height: auto;
+  }
+
+
+}

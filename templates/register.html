@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}
+Registration page
+{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/sign.css') }}">
+{% endblock %}
+
+{% block content %}
+<body>
+  <div class="sign">
+    <div class="container">
+      <div class="signup text-center">
+        <form method="POST" class="form-register" style="color:white">
+            {{ form.hidden_tag() }}
+            <h1 style="color:black; text-align:left;">Please Create Account</h1>
+              <hr style="height:2px;border-width:0;color: #465363;background-color:#465363;width:50%;margin-bottom:20px;">
+
+         {{ form.name(class="form-content", placeholder="Name") }}
+
+
+         {{ form.usertype(class="form-content", placeholder="Type of user") }}
+
+
+         {{ form.email_address(class="form-content", placeholder="Email") }}
+
+
+         {{ form.password1(class="form-content", placeholder="Password") }}
+     
+
+         {{ form.password2(class="form-content", placeholder="Confirm Password") }}
+        <br>
+            <div class="checkbox mb-3">
+                         <h6 style="color:black;">Already have an account?  <a class="login" href="{{ url_for('login_page') }}">Log-in</a></h6>
+
+                     </div>
+
+            {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+
+        </form>
+      </div>
+
+
+    </div>
+  </div>
+
+</body>
+
+{% endblock %}

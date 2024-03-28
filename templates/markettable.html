@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %}
+MarketSearch page
+{% endblock %}
+{% block head%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/table.css') }}">
+
+
+
+{% endblock %}
+{% block content %}
+
+<div>
+    <div class="theading">
+        <h1>Available Products</h1>
+        <hr>
+    </div>
+<div class="tstyle">
+<table class="table table-hover">
+    <thead>
+
+    <tr>
+            <!-- Your Columns HERE -->
+            <th scope="col">Product</th>
+            <th scope="col">Automation</th>
+            <th scope="col">Cost</th>
+            <th scope="col">Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Your rows inside the table HERE: -->
+        {% for item in items %}
+
+                    <tr>
+
+                <td>{{  item.product }}</td>
+                <td>{{ item.AutomationGrade }}</td>
+                <td>Rs. {{ item.cost }}</td>
+                        <td>
+                            <button class="btn btn-outline btn-success"><a href="/marketdetail/{{item.product}}">More Info</a></button>
+                        <button class="btn btn-outline btn-success"><a href="{{item.Link_to_buy}}">Purchase this item</a></button>
+                        </td>
+            </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+</div>
+</div>
+
+{% endblock %}
+
+    <!--

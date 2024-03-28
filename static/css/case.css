@@ -1,0 +1,29 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.head{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url(images/trainbg.jpg);
+  background-size: cover;
+  min-height: 50vh;
+  padding: 50px 0;
+}
+
+.text{
+  background-color: #fff4;
+}
+.head h1{
+  padding-bottom: 20px;
+}
+
+.farm{
+  background-color: #e1e6e2;
+}
+.farm p{
+  padding: 0 50px;
+}

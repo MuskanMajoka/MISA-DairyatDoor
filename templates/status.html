@@ -1,0 +1,88 @@
+<!-- status.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}
+Request Status Page
+{% endblock %}
+
+{% block head %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/status.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='js/status.js') }}"></script>
+{% endblock %}
+
+
+{% block content %}
+<body>
+    <div class="container">
+        <h1>Request Status</h1>
+
+        <div class="tab-buttons">
+            <button class="status-tab active" data-status="requests">Requests</button>
+            <button class="status-tab" data-status="delivered">Delivered</button>
+        </div>
+
+        {% if status_d %}
+            <!-- Display order details if there are orders -->
+            {% for order in status_d %}
+                <div class="order-container status-{{ order.status|lower }}" data-order-id="{{ order.id }}">
+                    <div class="order-header">
+                        <h3>Order ID: {{ order.order_id }}</h3>
+                        <p>Status: <span class="status">{{ order.status }}</span></p>
+                        {% if order.datetime.strftime('%Y-%m-%d') == now.strftime('%Y-%m-%d') %}
+                            <p>Ordered On: Today</p>
+                        {% else %}
+                            <p>Ordered On: {{ order.datetime.strftime('%Y-%b-%d') }}</p>
+                        {% endif %}
+                    </div>
+
+                    <div class="order-info">
+                        <div class="producer-info">
+                            <p><span class="bold">Your Producer:</span> {{ order.producer_selected }}</p>
+                            <p><span class="bold">Contact Producer:</span> {{ order.contact_producer }}</p>
+                        </div>
+                        <div class="delivery-info">
+                            <p><span class="bold">Delivery Agent:</span> {{ order.delivery_selected }}</p>
+                            <p><span class="bold">Contact Agent:</span> {{ order.contact_delivery }}</p>
+                        </div>
+                    </div>
+
+                    <button class="details-button">Details</button>
+
+                    <div class="order-details" style="display: none;">
+                        <p class="total-info">Total Price: Rs. {{ order.price }} <br> Total Quantity: {{ order.items_no }}</p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>S. No.</th>
+                                    <th>Name</th>
+                                    <th>Quantity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item_id, item_info in order.order_items.items() %}
+                                    <tr>
+                                        <td>{{ loop.index }}</td>
+                                        <td>{{ item_info.name }}</td>
+                                        <td>{{ item_info.quantity }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <!-- Show a message if there are no orders -->
+            <p>No orders found. Generate a request first.</p>
+        {% endif %}
+
+        <a href="/cart" class="go-back-button">Go To Cart</a>
+    </div>
+</body>
+{% endblock %}

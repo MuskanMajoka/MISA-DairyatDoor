@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+
+{% block title %}
+MISA🥛
+{% endblock %}
+
+{% block head %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/utils.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/fodder.css') }}">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+{% endblock %}
+
+{% block content %}
+
+<section class="section1">
+  <div id="top" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+              <img src="static/images/slide1.jpg" class="d-block w-100" alt="Slide 1 Image">
+              <div class="carousel-caption d-none d-md-block back-blur">
+                <h1>HealthCare</h1>
+                <p>Best health of your livestock, best nutrition you can provide in the product!</p>
+                <a href="{{ url_for('healthcareservices_page') }}" class="btn btn-success">Explore</a>
+              </div>
+          </div>
+
+          <!--slide 2-->
+
+          <a href="{{ url_for('fodderinfo_page') }}" class="carousel-item">
+            <img src="static/images/slide2.jpg" class="d-block w-100" alt="Slide 2 Image">
+            <div class="carousel-caption d-none d-md-block back-blur">
+              <h2>Fooder</h2>
+              <p>Looking for places to buy the fodder for your cattle. Get to know the companies nearby!</p>
+            </div>
+          </a>
+        
+          <!--slide 3-->
+
+          <a href="{{ url_for('vetsinfo_page') }}" class="carousel-item">
+            <img src="static/images/slide3.jpg" class="d-block w-100" alt="Slide 3 Image">
+            <div class="carousel-caption d-none d-md-block back-blur">
+              <h2>Veterinary</h2>
+              <p>Concerned about the health of your livestock, Vets nearby can be of help!</p>
+            </div>
+          </a>
+        
+          <!--slide 4-->
+
+          <a href="{{ url_for('ethnoinfo_page') }}" class="carousel-item">
+            <img src="static/images/slide6.jpeg" class="d-block w-100" alt="Slide 4 Image">
+            <div class="carousel-caption d-none d-md-block back-blur">
+              <h2>Ethnoveterinary</h2>
+              <p>Want to take care of your livestock at home, take a look at the Ethnoveterinary practices!</p>
+            </div>
+          </a>
+      
+      <!-- Add more slides as needed -->
+
+      </div>
+      <!-- Add carousel controls (optional) -->
+      <a class="carousel-control-prev" href="#top" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#top" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+      </a>
+  </div>
+</section>
+
+<section id="About" class="section2" >
+  <div id="bottom" class="health flex flex-col justify-center items-center">
+    <h1 class="my-1">HealthCare</h1>
+    <hr>
+    <p>
+      Ensuring the healthcare of cattle is paramount for maintaining their well-being and optimizing agricultural productivity. Cattle health management involves a comprehensive approach that addresses various aspects of their physical, nutritional, and environmental needs. 
+    </p>
+    <p>
+      Regular veterinary check-ups are essential to monitor the overall health of the herd, identify and treat any illnesses promptly, and implement preventive measures. Vaccinations play a crucial role in preventing contagious diseases, and a well-designed vaccination schedule is vital for disease control. 
+    </p>
+    <p>
+      Nutrition is another key component of cattle healthcare, requiring a balanced and appropriate diet to support growth, reproduction, and overall vitality. Adequate access to clean water is equally important. Moreover, proper housing and sanitation practices contribute significantly to preventing the spread of diseases. Farmers must also be vigilant about parasitic control, managing stress factors, and providing a comfortable and safe environment for the cattle. Effective healthcare measures not only ensure the welfare of the animals but also contribute to the sustainability and profitability of the livestock industry. 
+    </p>
+  </div>
+</section>
+
+<section id="Services" class="section3">
+  <div id="ser" class="flex flex-col">
+    <div class="flex flex-col justify-center">
+      <h2 class="my-2">SERVICES</h2>
+        <p class="my-2">....Healthcare resources tailored for the agricultural community....</p>
+    </div>
+
+    <div class="Services">
+
+      <a class="Services-child2 Fodder" href = "{{ url_for('fodderinfo_page') }}">
+        <img class="Serve-img Fodder-img" src="/static/images/buymilk.jpeg" />
+        <div class="content">
+          <div class="image-title">Fodder</div>
+        </div>
+      </a>  
+
+
+      <a class="Services-child2 Veterinary" href="{{ url_for('vetsinfo_page') }}">
+        <img class="Serve-img Veterinary-img" src="static/images/dairytech.jpeg" />
+        <div class="content">
+            <div class="image-title">Veterinary</div>
+        </div>
+      </a>
+
+
+      <a class="Services-child2 Ethnoveterinary" href="{{ url_for('ethnoinfo_page') }}">
+        <img class="Serve-img Ethnoveterinary-img" src="static/images/fodderrec.jpg" />
+        <div class="content">
+            <div class="image-title">Ethnoveterinary</div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+{% endblock %}

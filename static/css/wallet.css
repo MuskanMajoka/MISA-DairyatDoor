@@ -1,0 +1,93 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.wallet-section {
+    width: 80%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.wallet-section h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.wallet-section p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.add-money-button, .generate-qr-button, .add-money-button, .go-back-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px; /* Add margin for better separation */
+}
+
+.add-money-button:hover, .generate-qr-button:hover, .add-money-button:hover, .go-back-button:hover {
+    background-color: #0056b3;
+}
+
+.amount-field {
+    margin-bottom: 20px;
+}
+
+.amount-field label {
+    display: block;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.amount-field input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.amount-field input:focus {
+    border-color: #007bff;
+}
+
+.qr-code {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.qr-code #qrcode {
+    display: inline-block;
+    width: 35%; /* Adjust the width as needed */
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+

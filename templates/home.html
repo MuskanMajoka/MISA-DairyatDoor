@@ -1,0 +1,179 @@
+{% extends 'base.html' %}
+
+{% block title %}
+MISA🥛
+{% endblock %}
+
+{% block head %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/utils.css') }}">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+{% endblock %}
+
+{% block content %}
+
+<section class="section1">
+  <div id="top" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+              <img src="static/images/slide1.jpg" class="d-block w-100" alt="Slide 1 Image">
+              <div class="carousel-caption d-none d-md-block back-blur">
+                <h1>MISA</h1>
+                <h2>Milk Industry Synergy for Adoption</h2>
+                <p>A one-stop hub for everything related to dairy, an essential part of daily life for everyone.</p>
+                <a href="{{ url_for('services_page') }}" class="btn btn-primary">Explore</a>
+              </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+              <img src="static/images/slide2.jpg" class="d-block w-100" alt="Slide 2 Image">
+              <div class="carousel-caption d-none d-md-block back-blur">
+                  <h2>Feel the goods of Milk</h2>
+                  <p>Milk: Nature's Nectar, the Irresistible First Sip for Everyone</p>
+              </div>
+          </div>
+
+          <!--slide 3-->
+
+          <div class="carousel-item">
+            <img src="static/images/slide3.jpg" class="d-block w-100" alt="Slide 3 Image">
+            <div class="carousel-caption d-none d-md-block back-blur">
+              <h2>Feel the goods of Milk</h2>
+              <p>Milk is a nutrient-rich liquid food produced by mammals and is the primary source of nutrients for young infants before they can digest solid food...</p>
+            </div>
+          </div>
+
+          <!--slide 4-->
+
+          <a href="{{ url_for('marketplace_page') }}" class="carousel-item">
+            <img src="static/images/slide4.jpeg" class="d-block w-100" alt="Slide 4 Image">
+            <div class="carousel-caption d-none d-md-block back-blur">
+              <h2>MarketPlace</h2>
+              <p>Daily routine of milk collection made easier for the customer at their doorsteps!</p>
+            </div>
+          </a>
+        
+          <!--slide 5-->
+
+          <a href="{{ url_for('technology_page') }}" class="carousel-item">
+            <img src="static/images/slide5.jpeg" class="d-block w-100" alt="Slide 5 Image">
+            <div class="carousel-caption d-none d-md-block back-blur">
+              <h2>Technology</h2>
+              <p>Improve the productivity with the best machines to support your farms and techniques!</p>
+            </div>
+          </a>
+        
+          <!--slide 6-->
+
+          <a href="{{ url_for('healthcare_page') }}" class="carousel-item">
+            <img src="static/images/slide6.jpeg" class="d-block w-100" alt="Slide 6 Image">
+            <div class="carousel-caption d-none d-md-block back-blur">
+              <h2>HealthCare</h2>
+              <p>Best health of your livestock, best nutrition you can provide in the product!</p>
+            </div>
+          </a>
+        
+          <!--slide 7-->
+
+          <a href="{{ url_for('study_page') }}" class="carousel-item">
+            <img src="static/images/slide7.jpeg" class="d-block w-100" alt="Slide 7 Image">
+            <div class="carousel-caption d-none d-md-block back-blur">
+              <h2>Education</h2>
+              <p>Explore techniques and developments in the sector at the earliest!</p>
+            </div>
+          </a>
+        
+
+
+          <!-- Add more slides as needed -->
+
+      </div>
+      <!-- Add carousel controls (optional) -->
+      <a class="carousel-control-prev" href="#top" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#top" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+      </a>
+  </div>
+</section>
+          
+           
+<hr>
+      <section id="Services" class="section3">
+        <div id="ser" class="flex flex-col">
+          <div class="flex flex-col justify-center">
+            <h2  class="my-1">SERVICES</h2>
+              <p class="my-1">Our platform seamlessly blends the joy of dairy shopping with a tech-savvy farm experience, offering a rich repository of education and healthcare resources tailored for the agricultural community.</p>
+          </div>
+
+          <div class="Services">
+
+            <a class="Services-child Order" href = "{{ url_for('marketplace_page') }}">
+              <img class="Serve-img Order-img" src="/static/images/buymilk.jpeg" />
+              <div class="content">
+                <div class="image-title">MarketPlace</div>
+              </div>
+              
+
+
+            <a class="Services-child Technology" href="{{ url_for('technology_page') }}">
+              <img class="Serve-img Technology-img" src="static/images/dairytech.jpeg" />
+              <div class="content">
+                  <div class="image-title">Technology</div>
+              </div>
+          </a>
+
+
+          <a class="Services-child Fodder" href="{{ url_for('healthcare_page') }}">
+            <img class="Serve-img Fodder-img" src="static/images/fodderrec.jpg" />
+            <div class="content">
+                <div class="image-title">HealthCare</div>
+            </div>
+        </a>
+        
+
+            
+        <a class="Services-child Study" href="{{ url_for('study_page') }}">
+          <img class="Serve-img Study-img" src="static/images/education.jpg" />
+          <div class="content">
+              <div class="image-title">Education</div>
+          </div>
+      </a>
+      
+
+        </div>
+
+      </section>
+      <hr>
+      <section id="About" class="section4" >
+        <div id="bottom" class="aboutus flex flex-col justify-center items-center">
+           <h1 class="my-1">About Us</h1>
+           <p>
+            MISA is not just a platform; it's a hub that connects customers and dairy farmers. Explore a treasure trove of training programs and workshops, empowering farmers with the latest techniques and technologies. We care for livestock health by recommending the best fodder, and farmers receive personalized tech recommendations. Plus, our consumers enjoy doorstep delivery of nutritious milk, customized to their preferences. </p>
+
+        </div>
+
+
+
+      
+           
+
+           
+        
+
+      </section>
+      <hr>
+    </main>
+
+  </div>
+
+
+
+{% endblock %}

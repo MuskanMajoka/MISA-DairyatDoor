@@ -1,0 +1,63 @@
+
+{% extends 'base.html' %}
+
+{% block title %}
+Cart page
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/cart.css') }}">
+{% endblock %}
+
+{% block content %}
+<body>
+    <div class="cart-container">
+        <div class="cart-items">
+            <h1>Your Shopping Cart</h1>
+            {% if cart_items %}
+                {% for item in cart_items %}
+                    <div class="cart-item">
+                        <img src="{{ item.imgUrl }}" alt="{{ item.title }}">
+                        <div class="cart-item-info">
+                            <h2>{{ item.title }}</h2>
+                            <p class="quantity">Quantity: {{ item.quantity }}</p>
+                            <p class="price">Price: Rs. {{ item.price }}</p>
+                            <form action="/remove_from_cart/{{ item.id }}" method="post">
+                                <input type="submit" value="Remove" class="remove-button">
+                            </form>
+                        </div>
+                    </div>
+                {% endfor %}
+                <!-- Button to go to marketplace -->
+                <a href="/MarketPlace" class="go-to-market-button">Go to Market</a>
+            {% else %}
+                <div class="empty-cart-message">
+                    <h2>Your cart is empty!!</h2>
+                    <p>Please click on the button below to visit the Market and buy.</p>
+                    <a href="/MarketPlace" class="go-to-market-button empty-cart-button">Go to Market</a>
+                </div>
+            {% endif %}
+        </div>
+
+
+        <div class="right-side">
+            <div class="cart-summary">
+                <h2>Cart Summary</h2>
+                <p>Total Items: {{ cart_items|length }}</p>
+                <p>Total Quantity: {{ cart_items|sum(attribute='quantity') }}</p>
+                <p>Total Price: Rs {{ cart_items|sum(attribute='price') }}</p>
+                <a href="/cgrequest" class="checkout-button">Generate Request</a>
+            </div>
+
+            <div class="wallet-details">
+                <h2>Your Wallet Details</h2>
+                <a href="/wallet" class="wallet-button">View Wallet</a>
+            </div>
+            <div class="request-status">
+                <h2>Request Status</h2>
+                <a href="/status" class="check-status-button">Check Status</a>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}

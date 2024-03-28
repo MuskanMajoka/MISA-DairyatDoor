@@ -1,0 +1,64 @@
+<!-- cgrequest.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}
+Generate Request
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cgrequest.css') }}">
+    <!-- Add the SweetAlert2 local script -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <!-- Add jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+{% endblock %}
+
+{% block content %}
+<body>
+    <div class="generate-request-container">
+        <h1>Generate Request</h1>
+
+        <div class="order-details-container">
+            <h2>Your Order Details</h2>
+
+            {% if cart_items %}
+                {% for item in cart_items %}
+                    <div class="order-item">
+                        <p><span class="bold">Title:</span> {{ item.title }}</p>
+                        <p><span class="bold">Quantity:</span> {{ item.quantity }}</p>
+                        <p><span class="bold">Price:</span> Rs. {{ item.price }}</p>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No items in the cart.</p>
+            {% endif %}
+        </div>
+
+        <div class="buttons-container">
+            <a href="/confirm_request" class="confirm-request-button">Confirm Request</a>
+            <a href="/cart" class="go-back-button">Go Back</a>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                $("#confirmForm").submit(function (event) {
+                    // Prevent the form from submitting the traditional way
+                    event.preventDefault();
+
+                    // Display a success notification using SweetAlert2
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Request Confirmed!',
+                        text: 'Your order request has been generated.',
+                        confirmButtonText: 'OK',
+                        onClose: function() {
+                            window.location.href = '/confirm_request';
+                        }
+                    });
+                });
+            });
+        </script>
+    </div>
+</body>
+{% endblock %}
