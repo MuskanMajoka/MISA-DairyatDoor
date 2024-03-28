@@ -1,6 +1,6 @@
 ###display data for customer
-from Website.retrievedata import dataframe_to_import
-from Website.forms import marketform
+from retrievedata import dataframe_to_import
+from forms import marketform
 
 df1 = dataframe_to_import.recommendation_table1
 req_dict = {'Capacity': [], 'Automation': [], 'Cost': []}

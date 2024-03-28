@@ -2,10 +2,10 @@
 # https://flask.palletsprojects.com/en/2.1.x/quickstart/#
 # https://github.com/jimdevops19/codesnippets
 
-from Website import app
+import app
 from flask import render_template, redirect, url_for, flash
-from Website.retrievedata import firestore_db, dataframe_to_import, CartItem
-from Website.forms import registrationform, loginform, marketform , fodderform, vetsform, trainingform, workshopform, instituteform, ethnoform
+from retrievedata import firestore_db, dataframe_to_import, CartItem
+from forms import registrationform, loginform, marketform , fodderform, vetsform, trainingform, workshopform, instituteform, ethnoform
 import pandas
 
 

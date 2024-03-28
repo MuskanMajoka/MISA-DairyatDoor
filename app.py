@@ -13,8 +13,8 @@ bcrypt = Bcrypt(app)
 # links to work on
 # https://flask.palletsprojects.com/en/2.1.x/quickstart/#
 # https://github.com/jimdevops19/codesnippets
-from Website.retrievedata import firestore_db, database, dataframe_to_import, CartItem, wallet_data, status_data, generate_request_data
-from Website.forms import registrationform, loginform, marketform, fodderform, trainingform, workshopform, \
+from retrievedata import firestore_db, database, dataframe_to_import, CartItem, wallet_data, status_data, generate_request_data
+from forms import registrationform, loginform, marketform, fodderform, trainingform, workshopform, \
     instituteform, ethnoform, cartform
 
 ##scripting different pages.>

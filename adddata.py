@@ -1,4 +1,4 @@
-from Website.retrievedata import firestore_db
+from retrievedata import firestore_db
 
 # add data by manufacturer
 new_machine = {}

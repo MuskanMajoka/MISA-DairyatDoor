@@ -2,7 +2,7 @@
 
 # Importing the libraries
 import pandas as pd
-from Website.adddata import new_machine
+from adddata import new_machine
 
 new_machine_dataframe = pd.DataFrame.from_dict(new_machine)
 
